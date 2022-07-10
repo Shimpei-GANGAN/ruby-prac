@@ -12,6 +12,6 @@ COPY Gemfile .
 COPY Gemfile.lock .
 
 COPY . .
-# NOTE: bundle installでエラーが起きるため、setup.shでインストールする
+# NOTE: bundle installでエラーが起きるため、一旦コメントアウトする
 # RUN bundle install
-RUN sh setup.sh
+RUN gem install pre-commit rubocop rubocop-rspec
