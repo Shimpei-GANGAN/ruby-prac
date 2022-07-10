@@ -1,3 +1,3 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'rubocop', require: false
+source "https://rubygems.org"

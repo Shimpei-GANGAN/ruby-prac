@@ -4,4 +4,4 @@ WORKDIR /app
 COPY Gemfile .
 COPY Gemfile.lock .
 
-# RUN bundle install --path /vender/bundle
+# RUN bundle install
