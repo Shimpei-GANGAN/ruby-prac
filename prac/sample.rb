@@ -48,20 +48,32 @@
 # }
 
 # Q24
-str = "Hi\n"
-print(str, "!\n")
+# str = "Hi\n"
+# print(str, "!\n")
 
-str1 = str.chomp
-str2 = str.chomp.chomp
-str3 = str.chop
-str4 = str.chop.chop
+# str1 = str.chomp
+# str2 = str.chomp.chomp
+# str3 = str.chop
+# str4 = str.chop.chop
 
-print(str1, "!\n")
-print(str2, "!\n")
-print(str3, "!\n")
-print(str4, "!\n")
+# print(str1, "!\n")
+# print(str2, "!\n")
+# print(str3, "!\n")
+# print(str4, "!\n")
 
 # Q25
-puts('名前を入力してください.')
-name = gets.chomp
-printf("%sさん, こんにちは\n", name)
+# puts('名前を入力してください.')
+# name = gets.chomp
+# printf("%sさん, こんにちは\n", name)
+
+# Q27
+nums = [1, 2, 3]
+strs = ["a", "b", "c"]
+
+nums.each_with_index do |num, index|
+  puts "#{index + 1}番目: #{num}"
+end
+puts("---------------------------------")
+strs.each_with_index do |str, index|
+  puts "#{index + 1}番目: #{str}"
+end
