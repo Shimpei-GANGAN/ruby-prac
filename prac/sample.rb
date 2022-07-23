@@ -117,14 +117,36 @@
 # puts "-----------------------------------"
 
 # Q30
-eng = { 'かえる' => 'frog', 'はち' => 'bee', 'かも' => 'duck',
-        'せみ' => 'cicada' }
+# eng = { 'かえる' => 'frog', 'はち' => 'bee', 'かも' => 'duck',
+#         'せみ' => 'cicada' }
 
-print('選んでください (かえる, はち, かも, せみ) > ')
-str = gets.chomp
-puts (eng[str]).to_s
-puts '-----------------------------------'
+# print('選んでください (かえる, はち, かも, せみ) > ')
+# str = gets.chomp
+# puts (eng[str]).to_s
+# puts '-----------------------------------'
 
-eng.each do |key, value|
-  puts "#{key}:#{value}"
+# eng.each do |key, value|
+#   puts "#{key}:#{value}"
+# end
+
+# Q32
+def puts_hash(hash)
+  puts "size: #{hash.size}"
+  puts "empty?: #{hash.empty?}"
+  hash.each do |key, value|
+    puts "#{key}:#{value}"
+  end
+  puts "------------------------------------"
 end
+
+eng = Hash.new
+puts_hash(eng)
+
+eng["かえる"] = "frog"
+eng["かも"] = "duck"
+eng["せみ"] = "cicada"
+
+puts_hash(eng)
+
+eng.delete("かも")
+puts_hash(eng)
