@@ -77,3 +77,18 @@ puts("---------------------------------")
 strs.each_with_index do |str, index|
   puts "#{index + 1}番目: #{str}"
 end
+
+# Q28
+name = Array.new(3, "")
+puts "[1回目] 名前を入力してください"
+name[0] = gets.chomp
+
+puts "[2回目] 名前を入力してください"
+name[1] = gets.chomp
+
+puts "[3回目] 名前を入力してください"
+name[2] = gets.chomp
+
+puts "#{name[0]}さん、おはようございます"
+puts "#{name[1]}さん、こんにちは"
+puts "#{name[2]}さん、こんばんは"
