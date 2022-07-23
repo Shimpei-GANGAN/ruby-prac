@@ -94,24 +94,37 @@
 # puts "#{name[2]}さん、こんばんは"
 
 # Q29
-fruit_list = Array.new(0, "")
+# fruit_list = Array.new(0, "")
 
-i = 0
-while i < 5
-  print("くだもの名を入力してください(.を入力したら終了する)> ")
-  fruit = gets.chomp
-  if fruit == "."
-    break
-  end
+# i = 0
+# while i < 5
+#   print("くだもの名を入力してください(.を入力したら終了する)> ")
+#   fruit = gets.chomp
+#   if fruit == "."
+#     break
+#   end
 
-  fruit_list[i] = fruit
-  i += 1
+#   fruit_list[i] = fruit
+#   i += 1
+# end
+
+# puts "-----------------------------------"
+# i = 0
+# while i < fruit_list.size
+#   puts "フルーツ: #{fruit_list[i]}"
+#   i += 1
+# end
+# puts "-----------------------------------"
+
+# Q30
+eng = { 'かえる' => 'frog', 'はち' => 'bee', 'かも' => 'duck',
+        'せみ' => 'cicada' }
+
+print('選んでください (かえる, はち, かも, せみ) > ')
+str = gets.chomp
+puts (eng[str]).to_s
+puts '-----------------------------------'
+
+eng.each do |key, value|
+  puts "#{key}:#{value}"
 end
-
-puts "-----------------------------------"
-i = 0
-while i < fruit_list.size
-  puts "フルーツ: #{fruit_list[i]}"
-  i += 1
-end
-puts "-----------------------------------"
