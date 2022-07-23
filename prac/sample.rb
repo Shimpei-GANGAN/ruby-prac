@@ -67,28 +67,51 @@
 # printf("%sさん, こんにちは\n", name)
 
 # Q27
-nums = [1, 2, 3]
-strs = ["a", "b", "c"]
+# nums = [1, 2, 3]
+# strs = ["a", "b", "c"]
 
-nums.each_with_index do |num, index|
-  puts "#{index + 1}番目: #{num}"
-end
-puts("---------------------------------")
-strs.each_with_index do |str, index|
-  puts "#{index + 1}番目: #{str}"
-end
+# nums.each_with_index do |num, index|
+#   puts "#{index + 1}番目: #{num}"
+# end
+# puts("---------------------------------")
+# strs.each_with_index do |str, index|
+#   puts "#{index + 1}番目: #{str}"
+# end
 
 # Q28
-name = Array.new(3, "")
-puts "[1回目] 名前を入力してください"
-name[0] = gets.chomp
+# name = Array.new(3, "")
+# puts "[1回目] 名前を入力してください"
+# name[0] = gets.chomp
 
-puts "[2回目] 名前を入力してください"
-name[1] = gets.chomp
+# puts "[2回目] 名前を入力してください"
+# name[1] = gets.chomp
 
-puts "[3回目] 名前を入力してください"
-name[2] = gets.chomp
+# puts "[3回目] 名前を入力してください"
+# name[2] = gets.chomp
 
-puts "#{name[0]}さん、おはようございます"
-puts "#{name[1]}さん、こんにちは"
-puts "#{name[2]}さん、こんばんは"
+# puts "#{name[0]}さん、おはようございます"
+# puts "#{name[1]}さん、こんにちは"
+# puts "#{name[2]}さん、こんばんは"
+
+# Q29
+fruit_list = Array.new(0, "")
+
+i = 0
+while i < 5
+  print("くだもの名を入力してください(.を入力したら終了する)> ")
+  fruit = gets.chomp
+  if fruit == "."
+    break
+  end
+
+  fruit_list[i] = fruit
+  i += 1
+end
+
+puts "-----------------------------------"
+i = 0
+while i < fruit_list.size
+  puts "フルーツ: #{fruit_list[i]}"
+  i += 1
+end
+puts "-----------------------------------"
