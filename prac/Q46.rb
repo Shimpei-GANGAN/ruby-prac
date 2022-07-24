@@ -21,8 +21,8 @@ def quadratic(a, b, c)
     [x1]
   else
     # NOTE: Math.sqrtの返り値がunsignedのため, 結果に-1をかけている
-    x1 = Complex(Rational(-b, a2), Rational(Math.sqrt(discriminant(a, b, c) * -1), a2))
-    x2 = Complex(Rational(-b, a2), Rational(- Math.sqrt(discriminant(a, b, c) * -1), a2))
+    x1 = Complex(Rational(-b, a2), Rational(Math.sqrt(d * -1), a2))
+    x2 = Complex(Rational(-b, a2), Rational(- Math.sqrt(d * -1), a2))
 
     [x1, x2]
   end
