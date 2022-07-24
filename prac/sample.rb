@@ -180,11 +180,54 @@
 # puts max(2, 3).to_s
 
 # Q37
-print('文字列を入力してください. > ')
-str = gets.chomp
+# print('文字列を入力してください. > ')
+# str = gets.chomp
 
-if /^$/ =~ str
-  puts 'マッチしたで'
-else
-  puts 'マッチせえへんで'
+# if /^$/ =~ str
+#   puts 'マッチしたで'
+# else
+#   puts 'マッチせえへんで'
+# end
+
+# Q40
+puts 'Q40'
+filename = 'foo.txt'
+out = open(filename, 'w')
+out.puts('これはテストです')
+out.puts('これはテストですです')
+out.close
+
+# Q42
+puts 'Q42'
+filename = 'foo.txt'
+input = open(filename, 'r')
+line = input.gets
+line.chomp!
+puts "入力内容は「#{line}」です。"
+input.close
+
+# Q43
+puts 'Q43'
+io = open('foo.txt', 'r')
+loop do
+  line = io.gets
+  print(line)
+  break if line.nil?
+end
+io.close
+
+# Q44
+puts 'Q44'
+io = open('foo.txt', 'r')
+while line = io.gets
+  print(line)
+end
+io.close
+
+# Q45
+puts 'Q45'
+open('foo.txt', 'r') do |io|
+  while line = io.gets
+    print(line)
+  end
 end
