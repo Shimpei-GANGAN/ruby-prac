@@ -152,29 +152,39 @@
 # puts_hash(eng)
 
 # Q33
-def zeikomi(nedan)
-  printf("%d円\n", nedan * 1.1)
-end
+# def zeikomi(nedan)
+#   printf("%d円\n", nedan * 1.1)
+# end
 
-zeikomi(300)
-zeikomi(2600)
+# zeikomi(300)
+# zeikomi(2600)
 
 # Q34
-def san_tan_gen(doushi)
-  return doushi + "s"
-end
+# def san_tan_gen(doushi)
+#   "#{doushi}s"
+# end
 
-puts "動詞を入力してください > "
-doushi = gets.chomp
-puts "3人称単数現在の場合は, #{san_tan_gen(doushi)}としてください"
+# puts '動詞を入力してください > '
+# doushi = gets.chomp
+# puts "3人称単数現在の場合は, #{san_tan_gen(doushi)}としてください"
 
 # Q35
-def max(a, b)
-  if a > b
-    return a
-  else
-    return b
-  end
-end
+# def max(a, b)
+#   if a > b
+#     a
+#   else
+#     b
+#   end
+# end
 
-puts "#{max(2, 3)}"
+# puts max(2, 3).to_s
+
+# Q37
+print('文字列を入力してください. > ')
+str = gets.chomp
+
+if /^$/ =~ str
+  puts 'マッチしたで'
+else
+  puts 'マッチせえへんで'
+end
