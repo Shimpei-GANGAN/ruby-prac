@@ -130,23 +130,51 @@
 # end
 
 # Q32
-def puts_hash(hash)
-  puts "size: #{hash.size}"
-  puts "empty?: #{hash.empty?}"
-  hash.each do |key, value|
-    puts "#{key}:#{value}"
-  end
-  puts "------------------------------------"
+# def puts_hash(hash)
+#   puts "size: #{hash.size}"
+#   puts "empty?: #{hash.empty?}"
+#   hash.each do |key, value|
+#     puts "#{key}:#{value}"
+#   end
+#   puts "------------------------------------"
+# end
+
+# eng = Hash.new
+# puts_hash(eng)
+
+# eng["かえる"] = "frog"
+# eng["かも"] = "duck"
+# eng["せみ"] = "cicada"
+
+# puts_hash(eng)
+
+# eng.delete("かも")
+# puts_hash(eng)
+
+# Q33
+def zeikomi(nedan)
+  printf("%d円\n", nedan * 1.1)
 end
 
-eng = Hash.new
-puts_hash(eng)
+zeikomi(300)
+zeikomi(2600)
 
-eng["かえる"] = "frog"
-eng["かも"] = "duck"
-eng["せみ"] = "cicada"
+# Q34
+def san_tan_gen(doushi)
+  return doushi + "s"
+end
 
-puts_hash(eng)
+puts "動詞を入力してください > "
+doushi = gets.chomp
+puts "3人称単数現在の場合は, #{san_tan_gen(doushi)}としてください"
 
-eng.delete("かも")
-puts_hash(eng)
+# Q35
+def max(a, b)
+  if a > b
+    return a
+  else
+    return b
+  end
+end
+
+puts "#{max(2, 3)}"
